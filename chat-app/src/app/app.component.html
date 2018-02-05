@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row columns ">
+    <div id="iface">
+      <input type="text" id="message" placeholder="Your message here" [(ngModel)]="msg" #message>
+      <input type="submit" class="submit" value="Send now" (click)="send(message.value)">
+
+      <div class="details-container">
+        <div class="row">
+          <div class="medium-9 columns ">
+            <p>This is a chat message</p>
+          </div>
+          <div class="medium-3 columns">
+            <button>edit</button>
+            <button>delete</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="details-container">
+        <div class="row">
+          <div class="medium-9 columns ">
+            <input type="text" value="">
+          </div>
+          <div class="medium-3 columns">
+            <button>edit</button>
+            <button>delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

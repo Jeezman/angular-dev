@@ -1,0 +1,37 @@
+#iface {
+  background-color: #ebf2f2;
+  width: 100%;
+}
+
+input#message {
+  background-color: #384445;
+  font-size: 1.6em;
+  padding: 1.2em 0.7em;
+  color: #94aaac;
+}
+
+input.submit {
+  background-color: #00a8b6;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 1.02em 0.7em;
+  border: 0;
+  cursor: pointer;
+}
+
+.details-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 1.4em;
+  margin-bottom: 5px;
+  display: block;
+  border-left: 6px solid #00a8b6;
+}
+
+button {
+  background-color: #d4e0e1;
+  color: #465057;
+  padding: 10px;
+  font-size: 0.8em;
+  margin-left: 20px;
+}
