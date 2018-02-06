@@ -11,6 +11,8 @@ export class AppComponent {
   itemsRef: AngularFireList<any>;
   items: Observable<any[]>;
   msg: String = "";
+  editMsg: boolean;
+  editId: number;
 
   constructor(public af: AngularFireDatabase) {
     this.itemsRef = af.list("/messages");
@@ -21,12 +23,17 @@ export class AppComponent {
     });
   }
 
-  send(chatMsg: String) {
+  send(chatMsg: string) {
     this.itemsRef.push({ message: chatMsg });
     this.msg = "";
   }
 
-  delete(key) {
+  delete(key: string) {
     this.itemsRef.remove(key);
+  }
+
+  edit(key: string, message: string) {
+    this.itemsRef.update(key, { message: message });
+    this.editMsg = false;
   }
 }

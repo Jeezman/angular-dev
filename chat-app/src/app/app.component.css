@@ -1,6 +1,15 @@
+p {
+  margin: 0;
+}
+
 #iface {
   background-color: #ebf2f2;
   width: 100%;
+}
+
+.input-wrap {
+  display: flex;
+  margin-bottom: 10px;
 }
 
 input#message {
@@ -8,6 +17,7 @@ input#message {
   font-size: 1.6em;
   padding: 1.2em 0.7em;
   color: #94aaac;
+  margin: 0;
 }
 
 input.submit {
@@ -34,4 +44,14 @@ button {
   padding: 10px;
   font-size: 0.8em;
   margin-left: 20px;
+  text-transform: capitalize;
+}
+
+button.btn--delete {
+  background-color: #f41e1e;
+  color: #fff;
+}
+
+.row {
+  align-items: center;
 }

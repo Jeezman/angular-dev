@@ -2,17 +2,26 @@
 <div class="container">
   <div class="row columns ">
     <div id="iface">
-      <input type="text" id="message" placeholder="Your message here" [(ngModel)]="msg" #message>
-      <input type="submit" class="submit" value="Send now" (click)="send(message.value)">
+      <div class="input-wrap">
+        <input type="text" id="message" placeholder="Your message here" [(ngModel)]="msg" #message>
+        <input type="submit" class="submit" value="Send now" (click)="send(message.value)">
+      </div>
+
 
       <div class="details-container" *ngFor="let item of items | async; let i = index">
         <div class="row">
           <div class="medium-9 columns ">
-            <p>{{item.message}}</p>
+            <div *ngIf="(editId == i) && editMsg; then showEdit else showMsg"></div>
+            <ng-template #showMsg>
+              <p>{{item.message}}</p>
+            </ng-template>
+            <ng-template #showEdit>
+              <input type="text" value="{{item.message}}" (keyup.enter)="edit(item.key, $event.target.value)">
+            </ng-template>
           </div>
           <div class="medium-3 columns">
-            <button>edit</button>
-            <button (click)="delete(item.key)">delete</button>
+            <button (click)="(editMsg = true) && editId = i">edit</button>
+            <button (click)="delete(item.key)" class=" btn--delete ">delete</button>
           </div>
         </div>
       </div>
