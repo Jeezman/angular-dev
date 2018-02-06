@@ -16,7 +16,6 @@ export class AppComponent {
 
   constructor(public af: AngularFireDatabase) {
     this.itemsRef = af.list("/messages");
-    // this.items = af.list("/messages").valueChanges();
     // Use snapshotChanges().map() to store the key
     this.items = this.itemsRef.snapshotChanges().map(changes => {
       return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));

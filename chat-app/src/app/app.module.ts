@@ -8,12 +8,12 @@ import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyDJM2CBln7hg5hWOg8jpqPBVNG_SOyPWjc",
-  authDomain: "chat-app-f9435.firebaseapp.com",
-  databaseURL: "https://chat-app-f9435.firebaseio.com",
-  projectId: "chat-app-f9435",
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
   storageBucket: "",
-  messagingSenderId: "948932233607"
+  messagingSenderId: ""
 };
 
 @NgModule({
