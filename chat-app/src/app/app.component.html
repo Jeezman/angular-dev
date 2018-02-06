@@ -19,7 +19,7 @@
               <input type="text" value="{{item.message}}" (keyup.enter)="edit(item.key, $event.target.value)">
             </ng-template>
           </div>
-          <div class="medium-3 columns">
+          <div class="medium-3 columns button-wrap">
             <button (click)="(editMsg = true) && editId = i">edit</button>
             <button (click)="delete(item.key)" class=" btn--delete ">delete</button>
           </div>

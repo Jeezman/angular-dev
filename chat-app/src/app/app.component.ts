@@ -24,7 +24,9 @@ export class AppComponent {
   }
 
   send(chatMsg: string) {
-    this.itemsRef.push({ message: chatMsg });
+    if (chatMsg) {
+      this.itemsRef.push({ message: chatMsg });
+    }
     this.msg = "";
   }
 

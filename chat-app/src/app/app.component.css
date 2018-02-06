@@ -27,6 +27,7 @@ input.submit {
   padding: 1.02em 0.7em;
   border: 0;
   cursor: pointer;
+  width: 15%;
 }
 
 .details-container {
@@ -45,6 +46,7 @@ button {
   font-size: 0.8em;
   margin-left: 20px;
   text-transform: capitalize;
+  border-radius: 3px;
 }
 
 button.btn--delete {
@@ -54,4 +56,9 @@ button.btn--delete {
 
 .row {
   align-items: center;
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: flex-end;
 }
